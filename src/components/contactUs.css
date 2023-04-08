@@ -1,0 +1,42 @@
+body {
+    background-image: linear-gradient(to right, rgb(223, 157, 137), rgba(196, 196, 91, 0.632));
+}    
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.form-container {
+    justify-content: center;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+  
+.form {
+    position: relative;
+}
+
+button[type="submit"] {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-weight: bold;
+    background-color: #b4b3b3;
+    color: #161414;
+    border: none;
+    outline-color: #101112;
+    transition: background-color 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #eeb13f;
+    cursor: pointer;
+}
+
+
+  
+
