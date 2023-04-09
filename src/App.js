@@ -8,16 +8,16 @@ import Recipes from './components/recipes';
 import ContactUs from './components/contactUs';
 
 function App() {
-  return (
-    <Router>
-      <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/recipes" element={<Recipes />} />
-          <Route path="/contactUs" element={<ContactUs />} />
-        </Routes>
-    </Router>
-  );
+    return (
+        <Router>
+        <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/recipes" element={<Recipes />} />
+                <Route path="/contactUs" element={<ContactUs />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
