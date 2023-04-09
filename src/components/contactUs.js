@@ -5,83 +5,83 @@ import './contactUs.css';
 const FORM_ENDPOINT = ""; // TODO - filled at the 2nd return section
 
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
-  };
+    const [submitted, setSubmitted] = useState(false);
+    const handleSubmit = () => {
+        setTimeout(() => {
+        setSubmitted(true);
+        }, 100);
+};
 
 
-  if (submitted) {
+if (submitted) {
     return (
-      <>
+        <>
         <div className="text-2xl">Thank you!</div>
         <div className="text-md">We'll be in touch soon.</div>
-      </>
+        </>
     );
-  }
+}
 
-  return (
-    <div className="container">    
-    <div className="form-container">
-      <form
-        action={FORM_ENDPOINT}
-        onSubmit={handleSubmit}
-        method="POST"
-        target="_blank"
-      >
-   
-      <div style={{textAlign: 'center'}}>
-        <h1> Contact Us </h1>
-        <p>
-          Got a question? We'd love to hear from you.<br/>
-          Send a message and we'll respond as soon as possible
-        </p>
-      </div><br/><br/>
+    return (
+        <div className="container">    
+            <div className="form-container">
+                <form
+                    action={FORM_ENDPOINT}
+                    onSubmit={handleSubmit}
+                    method="POST"
+                    target="_blank"
+                >
+    
+        <div style={{textAlign: 'center'}}>
+            <h1> Contact Us </h1>
+            <p>
+            Got a question? We'd love to hear from you.<br/>
+            Send a message and we'll respond as soon as possible
+            </p>
+        </div><br/><br/>
 
-      <div className="col-sm-12">
-        <div className="form-group row">
-            <label className="control-label col-sm-1.5" style={{ marginLeft: '20px' }}>First Name:</label>
-              <div className="col-sm-4">
-                  <input type="firstname" className="form-control form-control-sm" id="colFormLabelSm" placeholder="John" />
-              </div>
-            <label className="control-label col-sm-1.5"  style={{ marginLeft: '60px' }}>Last Name:</label>
-              <div className="col-sm-4" >
-                  <input type="lastname" className="form-control form-control-sm" id="colFormLabelSm" placeholder="Doe" />
-              </div>
-          </div>
-      </div>
-      <br/>
-
-      <div class="col-sm-12">
-        <div className="form-group row">
-          <label className="control-label col-sm-1.5" >Email Address:</label>
-              <div className="col-sm-4">
-                  <input type="email" className="form-control form-control-sm" id="colFormLabelSm" placeholder="example@email.com" />
-              </div>                            
-          <label className="control-label col-sm-1.5"  style={{ marginLeft: '30px' }}>Confirm Email:</label>
-              <div className="col-sm-4">
-                <input type="confirmemail" className="form-control form-control-sm" id="colFormLabelSm" placeholder="example@email.com" />
+        <div className="col-sm-12">
+            <div className="form-group row">
+                <label className="control-label col-sm-1.5" style={{ marginLeft: '20px' }}>First Name:</label>
+                <div className="col-sm-4">
+                    <input type="firstname" className="form-control form-control-sm" id="colFormLabelSm" placeholder="John" />
+                </div>
+                <label className="control-label col-sm-1.5"  style={{ marginLeft: '60px' }}>Last Name:</label>
+                <div className="col-sm-4" >
+                    <input type="lastname" className="form-control form-control-sm" id="colFormLabelSm" placeholder="Doe" />
+                </div>
             </div>
         </div>
-      </div>
-      <br/>
+        <br/>
 
-      <div class="col-sm-12">
-        <div class="form-group row">
-          <label class="control-label col-sm-1.5" style={{ marginLeft: '10px' }}>Day Contact:</label>
-              <div class="col-sm-4">
-                  <input type="daycontact" class="form-control form-control-sm" id="colFormLabelSm" placeholder="01234567890" />
-              </div>                            
-          <label class="control-label col-sm-1.5"  style={{ marginLeft: '30px' }}>Mobile Contact:</label>
-              <div class="col-sm-4">
-                  <input type="mobilecontact" class="form-control form-control-sm" id="colFormLabelSm" placeholder="+44 1234567890" />
-              </div>
+        <div class="col-sm-12">
+            <div className="form-group row">
+            <label className="control-label col-sm-1.5" >Email Address:</label>
+                <div className="col-sm-4">
+                    <input type="email" className="form-control form-control-sm" id="colFormLabelSm" placeholder="example@email.com" />
+                </div>                            
+            <label className="control-label col-sm-1.5"  style={{ marginLeft: '30px' }}>Confirm Email:</label>
+                <div className="col-sm-4">
+                    <input type="confirmemail" className="form-control form-control-sm" id="colFormLabelSm" placeholder="example@email.com" />
+                </div>
+            </div>
         </div>
-      </div>
-      <br/>
-      <br/>
+        <br/>
+
+        <div class="col-sm-12">
+            <div class="form-group row">
+            <label class="control-label col-sm-1.5" style={{ marginLeft: '10px' }}>Day Contact:</label>
+                <div class="col-sm-4">
+                    <input type="daycontact" class="form-control form-control-sm" id="colFormLabelSm" placeholder="01234567890" />
+                </div>                            
+            <label class="control-label col-sm-1.5"  style={{ marginLeft: '30px' }}>Mobile Contact:</label>
+                <div class="col-sm-4">
+                    <input type="mobilecontact" class="form-control form-control-sm" id="colFormLabelSm" placeholder="+44 1234567890" />
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
 
       <div class="col-sm-12">
         <label className="control-label col-sm-2" style={{ marginLeft: '60px' }}>Your message</label>
