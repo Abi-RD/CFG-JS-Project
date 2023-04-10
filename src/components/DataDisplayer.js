@@ -2,7 +2,7 @@ import {useState, useEffect } from "react";
 import Modal from "./Modal"
 import '../index.css';
 
-export function DataDisplayer(props){
+export function DataDisplayer(){
 
     const [data, setData] =useState([])
 
@@ -15,22 +15,19 @@ export function DataDisplayer(props){
     })
 
         //fetch data from the API
-
         useEffect (()=> {
-            fetch (`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${props.text}`)
+            fetch (`https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert`)
             .then ((response) => response.json())
-            .then ((response) => {
-                setData(response.drinks)
-                //console.log(response.drinks)
+            .then ((response) => {setData(response.meals)
             })
             
-          }, [props.text])
+          }, [data])
 
         //handle the event when drink image is clicked 
 
         function handleClick (e) {
             e.preventDefault();
-            console.log (e.target)
+            //console.log (e.target)
             setModal({
                 state: "active",
                 //to display the inner text of the <span> element
@@ -42,19 +39,19 @@ export function DataDisplayer(props){
         
     
             return (
-                <div >
-                
-                    <p>Here are your possible drinks:</p>
+                <div>
+                <p className="displayer-title">Here are some delicious recipes to go with your gelato! </p>
+                <p className="displayer-comment">Click on them to discover more!</p>
                     <div className = "container">
                         <ul className="image-gallery">
-                            {data.map ((drink) => {
+                            {data.map ((item) => {
                                 return(
                                     <li onClick = {handleClick}>
-                                        <img
-                                            src = {drink.strDrinkThumb}
-                                            alt = {drink.strDrink}
+                                         <img
+                                            src = {item.strMealThumb}
+                                            alt = {item.strMeal}
                                         />
-                                        <div className="overlay"><span>{drink.strDrink}</span></div>
+                                        <div className="overlay"><span>{item.strMeal}</span></div>
                                     </li>
                             )}
                         )}
