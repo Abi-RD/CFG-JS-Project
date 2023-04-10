@@ -1,15 +1,17 @@
 import React from "react";
-  
-const About = () => {
+import { SearchBar } from '../components/SearchBar';
+import '../index.css';
+
+const Recipes = () => {
     return (
         <div>
-            <h1>
-                Laptops are Computers <br></br>
-                Science portal for geeks.
-            </h1>
-            <p> Always about us </p>
+          <p>Hi! What do you fancy?</p>
+          <SearchBar />
         </div>
-    );
-};
+      )
+      }
   
-export default About;
+export default Recipes;
+
+
+
