@@ -1,3 +1,7 @@
+body {
+    background-image: linear-gradient(to right, rgb(245, 227, 173), rgb(220, 163, 253));
+} 
+
 .App {
     text-align: center;
     font-family: cursive;
@@ -11,7 +15,7 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: rgb(112, 38, 126);
+    color: rgb(78, 38, 237);
     font-weight: bold;
 }
   
@@ -25,7 +29,7 @@
   
 
 a {
-    color: rgb(102, 110, 31);
+    color: rgb(78, 38, 237);
     text-decoration: none;
 }
   
@@ -44,7 +48,7 @@ button {
 }
 
 button:hover {
-    background-color: #8f92eb;
+    background-color: #dbf6ab;
     cursor: pointer;
 }
   

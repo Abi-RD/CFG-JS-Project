@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import cream_roll_log from '../assets/cream_roll_log.jpg';
+import sticky from '../assets/sticky.jpg';
 import ingre_2_icecream from '../assets/ingre_2_icecream.jpg';
-import icecream_sundae from '../assets/icecream_sundaejpg.jpg';
-import icecream_collection from '../assets/icecream_collection.jpg';
+import jam from '../assets/jam.jpg';
+import mess from '../assets/mess.jpg';
+import battenburg from '../assets/battenburg.jpg';
+import ab_crumb from '../assets/ab_crumb.jpg'
+
+
 import './home.css';
 
 function Home() { 
-    const [selectedImg, setSelectedImg] = useState(icecream_sundae);
+    const [selectedImg, setSelectedImg] = useState(sticky);
 
     const handleImgClick = (img) => {
         setSelectedImg(img);
     };
 
-    const picList = [icecream_sundae, cream_roll_log, ingre_2_icecream, icecream_collection,];
+    const picList = [sticky, ingre_2_icecream, jam, mess, battenburg, ab_crumb];
     const [index, setIndex] = useState(0);
 
     const onClickNext = () => {
@@ -31,8 +35,8 @@ function Home() {
         <div>
             <div className="App">
                 <header className="App-header">
-                    <h1>Scrumptious Ice Cream</h1>
-                    <h4 style={{ color: "red", fontSize: "20px", textAlign: "center" }}>
+                    <h1>Scrumptious Desserts and Cakes</h1>
+                    <h4 style={{ color: "red", fontSize: "20px", fontWeight: 'bold', textAlign: "center" }}>
                         you choose the ingredient, we provide the recipes
                     </h4>
                     <br/>
@@ -41,36 +45,46 @@ function Home() {
                         <img 
                             src={selectedImg}
                             alt="Selected Images"
-                            style={{ height: "500px", width: "700px" }}
+                            style={{ height: "490px", width: "710px" }}
                         />
                     </div>
 
                     <div>
                         <img
-                            src={icecream_sundae}
-                            alt="ice cream sundae"
+                            src={sticky}
+                            alt="Sticky toffee pudding"
                             style={{ height: "100px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(icecream_sundae)}
+                            onClick={() => handleImgClick(sticky)}
                         />
-
-                        <img
-                            src={cream_roll_log}
-                            alt="ice cream roll lod"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(cream_roll_log)}
-                        />
-
                         <img
                             src={ingre_2_icecream}
-                            alt="roll ice cream"
+                            alt="diffeent flavoured ice cream"
                             style={{ height: "100px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(ingre_2_icecream)}
                         />
                         <img
-                            src={icecream_collection}
-                            alt="different flovurs of ice cream"
+                            src={jam}
+                            alt="jam roly poly"
                             style={{ height: "100px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(icecream_collection)}
+                            onClick={() => handleImgClick(jam)}
+                        />
+                        <img
+                            src={mess}
+                            alt="eton mess"
+                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(mess)}
+                        />
+                        <img
+                            src={battenburg}
+                            alt="battenburg cake"
+                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(battenburg)}
+                        />
+                         <img
+                            src={ab_crumb}
+                            alt="apple and blackberry crumble"
+                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(ab_crumb)}
                         />
                     </div>
 
@@ -85,21 +99,12 @@ function Home() {
                     </div>
 
                     <p style={{fontSize: "24px", textAlign: "center", color: "black" }}>
-                        Deliciously Tantalising Healthy <br></br>
-                        home-made ice cream for every occassion 😋 <br></br> 
+                        For Deliciously Tantalising Healthy <br></br>
+                        home-made desserts and cakes for every occassion 😋 <br></br> 
                         {/* windows button + full-stop for emoji */}
                         Pop over to the
                     </p>
-        
-                    <a
-                        className="App-link"
-                        href="https://www.bbcgoodfood.com/recipes/collection/ice-cream-recipes"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                        recipes 
-                    </a><br></br>
-
+                            
                     {/* link to go to recipes page */}
                     <div>
                         <Link to="/recipes">Recipes</Link>

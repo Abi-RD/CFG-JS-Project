@@ -10,7 +10,7 @@ function Navigation() {
       <nav className="navbar navbar-expand navbar-light bg-info">
         <div className="container">
             <NavLink className="navbar-brand" to="/">
-                PICK-n-SCOOP
+                DESSERTS-N-CAKES
             </NavLink>
                 <div>
                 <ul className="navbar-nav ml-auto">
