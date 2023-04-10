@@ -1,15 +1,16 @@
 import React from "react";
-  
-const About = () => {
+import { DataDisplayer } from './DataDisplayer';
+import '../index.css';
+
+const Recipes = () => {
     return (
         <div>
-            <h1>
-                Laptops are Computers <br></br>
-                Science portal for geeks.
-            </h1>
-            <p> Always about us </p>
+          <DataDisplayer />
         </div>
-    );
-};
+      )
+      }
   
-export default About;
+export default Recipes;
+
+
+

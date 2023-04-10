@@ -21,7 +21,7 @@ function Navigation() {
                         </NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to="/recipes">
+                        <NavLink className="nav-link" to="/Recipes">
                             Recipes
                         </NavLink>
                     </li>

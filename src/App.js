@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navigation';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home';
-import Recipes from './components/recipes';
+import Recipes from './components/Recipes';
 import ContactUs from './components/contactUs';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/recipes" element={<Recipes />} />
+                <Route path="/Recipes" element={<Recipes />} />
                 <Route path="/contactUs" element={<ContactUs />} />
             </Routes>
         </Router>
