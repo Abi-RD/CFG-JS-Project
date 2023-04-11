@@ -2,7 +2,7 @@ import {useState, useEffect } from "react";
 import Modal from "./Modal"
 import '../index.css';
 
-export function DataDisplayer(){
+export function DataDisplayer(props){
 
     const [data, setData] =useState([])
 
@@ -16,12 +16,12 @@ export function DataDisplayer(){
 
         //fetch data from the API
         useEffect (()=> {
-            fetch (`https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert`)
+            fetch (`https://www.themealdb.com/api/json/v1/1/filter.php?i=${props.ingredient}`)
             .then ((response) => response.json())
             .then ((response) => {setData(response.meals)
             })
             
-          }, [data])
+          }, [data, props.ingredient])
 
         //handle the event when drink image is clicked 
 
@@ -33,18 +33,18 @@ export function DataDisplayer(){
                 //to display the inner text of the <span> element
                 caption: e.target.textContent
             })
-            //console.log (modal)
 
         } 
-        
-    
+
             return (
                 <div>
                 <p className="displayer-title">Here are some delicious recipes! </p>
                 <p className="displayer-comment">Click on them to discover more!</p>
                     <div className = "container">
                         <ul className="image-gallery">
-                            {data.map ((item) => {
+                            {
+                            data !== null && data
+                            .map((item) => {
                                 return(
                                     <li onClick = {handleClick}>
                                          <img
@@ -64,7 +64,6 @@ export function DataDisplayer(){
                         onClose = {()=> setModal("")}
                         />}
                 </div>
-
                 </div>
             )
         

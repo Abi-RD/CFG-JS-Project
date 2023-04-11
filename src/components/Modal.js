@@ -65,26 +65,46 @@ const [dessert, setDessert]= useState({})
                           height = "50px"/>
                         </li>
                         <li className="ingredient-list">
-                        {dessert.strIngredient5 !== null && <li>{dessert.strIngredient5}</li>}
+                        {(dessert.strIngredient5 !== null && dessert.strIngredient5 !== "") && <li>{dessert.strIngredient5}
                         <img className="ingredient-pic"
                           src= {`https://www.themealdb.com/images/ingredients/${dessert.strIngredient5}.png`}
                           alt="ingredient"
                           height = "50px"/>
+                          </li>}
                         </li>
                         <li className="ingredient-list">
-                        {dessert.strIngredient6 !== null && <li>{dessert.strIngredient6}</li>}
+                        {(dessert.strIngredient6 !== null && dessert.strIngredient6 !== "") && <li>{dessert.strIngredient6}
                         <img className="ingredient-pic"
                           src= {`https://www.themealdb.com/images/ingredients/${dessert.strIngredient6}.png`}
                           alt="ingredient"
                           height = "50px"/>
+                          </li>}
                         </li>
                         <li className="ingredient-list">
-                        {dessert.strIngredient7 !== null && <li>{dessert.strIngredient7}</li>}
+                        {(dessert.strIngredient7 !== null && dessert.strIngredient7 !== "") && <li>{dessert.strIngredient7}
                         <img className="ingredient-pic"
                           src= {`https://www.themealdb.com/images/ingredients/${dessert.strIngredient7}.png`}
                           alt="ingredient"
                           height = "50px"/>
+                          </li>}
                         </li>
+                        <li className="ingredient-list">
+                        {(dessert.strIngredient8 !== null && dessert.strIngredient8 !== "") && <li>{dessert.strIngredient8}
+                        <img className="ingredient-pic"
+                          src= {`https://www.themealdb.com/images/ingredients/${dessert.strIngredient8}.png`}
+                          alt="ingredient"
+                          height = "50px"/>
+                          </li>}
+                        </li>
+                          <li className="ingredient-list">
+                        {(dessert.strIngredient9 !== null && dessert.strIngredient9 !== "") && <li>{dessert.strIngredient9}
+                        <img className="ingredient-pic"
+                          src= {`https://www.themealdb.com/images/ingredients/${dessert.strIngredient9}.png`}
+                          alt="ingredient"
+                          height = "50px"/>
+                          </li>}
+                        </li>
+            
                     </ul>
                     <p className="ingredient-title">Cooking instructions:</p>
                     

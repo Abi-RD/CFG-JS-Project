@@ -1,11 +1,11 @@
 import React from "react";
-import { DataDisplayer } from './DataDisplayer';
+import { SearchBar } from './SearchBar';
 import '../index.css';
 
 const Recipes = () => {
     return (
         <div>
-          <DataDisplayer />
+          <SearchBar />
         </div>
       )
       }
