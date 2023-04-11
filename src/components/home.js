@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { BackToTop } from './BackToTop';
+// import { BackToTop } from './BackToTop';
 import sticky from '../assets/sticky.jpg';
 import chicken from '../assets/chicken.png';
 import xmas from '../assets/xmas.jpg';
@@ -33,10 +33,10 @@ function Home() {
 
     return (
         <div>
-        <div>
-          {/* adding the BackToTop component */}
+        {/* <div>
+          adding the BackToTop component
           <BackToTop /> 
-        </div>
+        </div> */}
             <div className="App">
                 <header className="App-header">
                     <h1>Scrumptious Home-Made Delicacies</h1>
