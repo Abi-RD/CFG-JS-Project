@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import sticky from '../assets/sticky.jpg';
-import ingre_2_icecream from '../assets/ingre_2_icecream.jpg';
+import xmas from '../assets/xmas.jpg';
 import jam from '../assets/jam.jpg';
 import mess from '../assets/mess.jpg';
 import battenburg from '../assets/battenburg.jpg';
-import ab_crumb from '../assets/ab_crumb.jpg'
-
-
+import bb_fool from '../assets/bb_fool.png'
 import './home.css';
 
 function Home() { 
@@ -17,7 +15,7 @@ function Home() {
         setSelectedImg(img);
     };
 
-    const picList = [sticky, ingre_2_icecream, jam, mess, battenburg, ab_crumb];
+    const picList = [sticky, xmas, jam, mess, battenburg, bb_fool];
     const [index, setIndex] = useState(0);
 
     const onClickNext = () => {
@@ -45,7 +43,7 @@ function Home() {
                         <img 
                             src={selectedImg}
                             alt="Selected Images"
-                            style={{ height: "490px", width: "710px" }}
+                            style={{ height: "535px", width: "770px" }}
                         />
                     </div>
 
@@ -53,38 +51,38 @@ function Home() {
                         <img
                             src={sticky}
                             alt="Sticky toffee pudding"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(sticky)}
                         />
                         <img
-                            src={ingre_2_icecream}
-                            alt="diffeent flavoured ice cream"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(ingre_2_icecream)}
+                            src={xmas}
+                            alt="christmas pudding trifle"
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(xmas)}
                         />
                         <img
                             src={jam}
                             alt="jam roly poly"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(jam)}
                         />
                         <img
                             src={mess}
                             alt="eton mess"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(mess)}
                         />
                         <img
                             src={battenburg}
                             alt="battenburg cake"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(battenburg)}
                         />
                          <img
-                            src={ab_crumb}
-                            alt="apple and blackberry crumble"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(ab_crumb)}
+                            src={bb_fool}
+                            alt="blackberry fool"
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(bb_fool)}
                         />
                     </div>
 
