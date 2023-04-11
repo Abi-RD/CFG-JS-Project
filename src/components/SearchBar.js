@@ -2,6 +2,7 @@ import React, { useState} from 'react';
 import { DataDisplayer } from './DataDisplayer';
 
 
+
 export function SearchBar () {
 
     const [term, setTerm] = useState ("")
@@ -19,9 +20,13 @@ export function SearchBar () {
 
     return (
         <div>
-            <form onSubmit = {handleSubmit}>
-                <label>What ingredient would you use today?</label>
+            <div className='form'>
+            <form 
+            className='form-container'
+            onSubmit = {handleSubmit}>
+                <label className='label' >What ingredient would you use today?</label>
                 <input 
+                    className='input'
                     type ="text"
                     aria-label = "ingredient chosen"
                     placeholder = "Search for your ingredient"
@@ -29,7 +34,7 @@ export function SearchBar () {
                     onChange = {handleChange}
                 />
             </form>
-
+            </div>
             <DataDisplayer 
               ingredient = {term}/>
         </div>
