@@ -28,20 +28,19 @@ code {
 
 /* styling for the search bar*/
 
-.form {
+.form-container {
   display: flex;
   min-width: 100px;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .label {
-  padding-left: 20px;
+  padding: 10px;
 }
 
 .input {
-  padding-right: 20px; 
   border-radius: 5px;
   height: 30px;
   width: 20%;
@@ -56,6 +55,7 @@ code {
 
 
 /* styling for the images gallery */
+
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -78,8 +78,6 @@ code {
   border-radius: 5px;
   
 }
-
-
 
 .overlay {
   position: absolute;

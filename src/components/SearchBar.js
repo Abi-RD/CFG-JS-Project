@@ -14,7 +14,7 @@ export function SearchBar () {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log (term)
+        //console.log (term)
         //setTerm ("")
     }
 
@@ -24,7 +24,7 @@ export function SearchBar () {
             <form 
             className='form-container'
             onSubmit = {handleSubmit}>
-                <label className='label' >What ingredient would you use today?</label>
+                <label className='label displayer-title' >What ingredient would you use today?</label>
                 <input 
                     className='input'
                     type ="text"

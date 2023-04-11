@@ -38,7 +38,7 @@ export function DataDisplayer(props){
 
             return (
                 <div>
-                <p className="displayer-title">Here are some delicious recipes! </p>
+                <p className="displayer-title">Here are some delicious recipes {props.ingredient.length >0 && <span>with {props.ingredient}</span>}: </p>
                 <p className="displayer-comment">Click on them to discover more!</p>
                     <div className = "container">
                         <ul className="image-gallery">
