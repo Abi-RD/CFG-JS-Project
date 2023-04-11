@@ -35,7 +35,7 @@ function Home() {
         <div>
             <div className="App">
                 <header className="App-header">
-                    <h1>Scrumptious Desserts and Cakes</h1>
+                    <h1>Scrumptious Home-Made Delicacies</h1>
                     <h4 style={{ color: "red", fontSize: "20px", fontWeight: 'bold', textAlign: "center" }}>
                         you choose the ingredient, we provide the recipes
                     </h4>
