@@ -4,18 +4,27 @@ const Modal = (props) =>{
 
 const [dessert, setDessert]= useState({})
 
-
-
     useEffect (()=> {
-        fetch (`https://www.themealdb.com/api/json/v1/1/search.php?s=${props.caption}`)
-        .then ((response) => response.json())
-        .then ((response) => {
-            setDessert(response.meals[0])
-            console.log(response.meals)
-        })
-        
-      }, [props.caption])
+      //to avoid setDessert to be triggered twice
+        let isRepetead = true;
 
+        const fetchData = async() =>{ 
+          const data = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${props.caption}`)
+          const json = await data.json()
+          
+          if (isRepetead) { 
+            setDessert (json.meals[0]); 
+          } 
+        }
+
+        fetchData()
+          .catch(console.error)
+
+        //console.log (dessert.strInstructions.split("."))
+        return () => isRepetead = false; 
+
+      },[props.caption])
+  
      
 
     return (
@@ -78,14 +87,22 @@ const [dessert, setDessert]= useState({})
                         </li>
                     </ul>
                     <p className="ingredient-title">Cooking instructions:</p>
-                    <p>{dessert.strInstructions}</p>
-                    <p>Check out the recipe video 
-                        <a
+                    
+                    <ol>{ dessert.strInstructions !== undefined &&
+                          dessert.strInstructions.split(".")
+                            .filter(instruction => instruction !== "")
+                            .map (step =>{
+                              return(
+                                  <li>{step}</li>
+                              )
+                            })}</ol>
+                    
+                    <p className="ingredient-title" >Check out the recipe video <a
                         className="video-link"
                         href= {dessert.strYoutube}
                         rel= "noreferrer"
                         target ="_blank"
-                    > here </a>
+                    >here</a>
                     </p>
                 </div> 
                 <div className="modal-footer">

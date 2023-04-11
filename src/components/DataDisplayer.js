@@ -40,7 +40,7 @@ export function DataDisplayer(){
     
             return (
                 <div>
-                <p className="displayer-title">Here are some delicious recipes to go with your gelato! </p>
+                <p className="displayer-title">Here are some delicious recipes! </p>
                 <p className="displayer-comment">Click on them to discover more!</p>
                     <div className = "container">
                         <ul className="image-gallery">
@@ -60,7 +60,6 @@ export function DataDisplayer(){
                             
                 <div>
                     {modal.state === "active" && <Modal 
-                        imgSrc= {modal.src}
                         caption = {modal.caption}
                         onClose = {()=> setModal("")}
                         />}
