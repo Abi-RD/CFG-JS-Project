@@ -6,8 +6,6 @@ import jam from '../assets/jam.jpg';
 import mess from '../assets/mess.jpg';
 import battenburg from '../assets/battenburg.jpg';
 import bb_fool from '../assets/bb_fool.png'
-
-
 import './home.css';
 
 function Home() { 
@@ -45,7 +43,7 @@ function Home() {
                         <img 
                             src={selectedImg}
                             alt="Selected Images"
-                            style={{ height: "570px", width: "770px" }}
+                            style={{ height: "535px", width: "770px" }}
                         />
                     </div>
 
@@ -53,37 +51,37 @@ function Home() {
                         <img
                             src={sticky}
                             alt="Sticky toffee pudding"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(sticky)}
                         />
                         <img
                             src={xmas}
                             alt="christmas pudding trifle"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(xmas)}
                         />
                         <img
                             src={jam}
                             alt="jam roly poly"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(jam)}
                         />
                         <img
                             src={mess}
                             alt="eton mess"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(mess)}
                         />
                         <img
                             src={battenburg}
                             alt="battenburg cake"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(battenburg)}
                         />
                          <img
                             src={bb_fool}
                             alt="blackberry fool"
-                            style={{ height: "100px", width: "100px", margin: "5px" }}
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(bb_fool)}
                         />
                     </div>
