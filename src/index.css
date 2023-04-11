@@ -26,9 +26,36 @@ code {
   text-align: center;
 }
 
+/* styling for the search bar*/
+
+.form {
+  display: flex;
+  min-width: 100px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  padding-left: 20px;
+}
+
+.input {
+  padding-right: 20px; 
+  border-radius: 5px;
+  height: 30px;
+  width: 20%;
+
+}
+
+.input:hover, .input:focus {
+  border: 1.5px solid #009688;
+  background-color: white;
+}
+
+
+
 /* styling for the images gallery */
-
-
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
