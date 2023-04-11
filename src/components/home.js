@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { BackToTop } from './BackToTop';
 import sticky from '../assets/sticky.jpg';
+import chicken from '../assets/chicken.png';
 import xmas from '../assets/xmas.jpg';
-import jam from '../assets/jam.jpg';
-import mess from '../assets/mess.jpg';
+import salmon from '../assets/salmon.png';
+import soup from '../assets/soup.png';
 import battenburg from '../assets/battenburg.jpg';
 import bb_fool from '../assets/bb_fool.png'
 import './home.css';
@@ -15,7 +17,7 @@ function Home() {
         setSelectedImg(img);
     };
 
-    const picList = [sticky, xmas, jam, mess, battenburg, bb_fool];
+    const picList = [sticky, salmon, xmas, soup, battenburg, chicken, bb_fool];
     const [index, setIndex] = useState(0);
 
     const onClickNext = () => {
@@ -31,6 +33,10 @@ function Home() {
 
     return (
         <div>
+        <div>
+          {/* adding the BackToTop component */}
+          <BackToTop /> 
+        </div>
             <div className="App">
                 <header className="App-header">
                     <h1>Scrumptious Home-Made Delicacies</h1>
@@ -47,7 +53,7 @@ function Home() {
                         />
                     </div>
 
-                    <div>
+                    <div>                    
                         <img
                             src={sticky}
                             alt="Sticky toffee pudding"
@@ -55,28 +61,34 @@ function Home() {
                             onClick={() => handleImgClick(sticky)}
                         />
                         <img
+                            src={salmon}
+                            alt="salmon"
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(salmon)}
+                        />
+                        <img
                             src={xmas}
                             alt="christmas pudding trifle"
                             style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(xmas)}
-                        />
+                        />                        
                         <img
-                            src={jam}
-                            alt="jam roly poly"
+                            src={soup}
+                            alt="Stilton soup"
                             style={{ height: "80px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(jam)}
-                        />
-                        <img
-                            src={mess}
-                            alt="eton mess"
-                            style={{ height: "80px", width: "100px", margin: "5px" }}
-                            onClick={() => handleImgClick(mess)}
+                            onClick={() => handleImgClick(soup)}
                         />
                         <img
                             src={battenburg}
                             alt="battenburg cake"
                             style={{ height: "80px", width: "100px", margin: "5px" }}
                             onClick={() => handleImgClick(battenburg)}
+                        />
+                        <img
+                            src={chicken}
+                            alt="Full English Breakfast"
+                            style={{ height: "80px", width: "100px", margin: "5px" }}
+                            onClick={() => handleImgClick(chicken)}
                         />
                          <img
                             src={bb_fool}
@@ -85,7 +97,6 @@ function Home() {
                             onClick={() => handleImgClick(bb_fool)}
                         />
                     </div>
-
      
                     <div style={{ display: "flex", padding:"30px" }}>
                         <button style={{ fontSize: "18px" }} onClick={onClickPrevious}>
@@ -95,10 +106,11 @@ function Home() {
                         Next
                         </button>
                     </div>
+                    <br/>
 
                     <p style={{fontSize: "24px", textAlign: "center", color: "black" }}>
                         For Deliciously Tantalising Healthy <br></br>
-                        home-made desserts and cakes for every occassion 😋 <br></br> 
+                        home-made delicacies for every occassion 😋 <br></br> 
                         {/* windows button + full-stop for emoji */}
                         Pop over to the
                     </p>
