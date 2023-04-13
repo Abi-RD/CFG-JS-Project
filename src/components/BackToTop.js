@@ -1,4 +1,5 @@
-// need to npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+// need to npm install @fortawesome/react-fontawesome 
+// need to npm install @fortawesome/free-solid-svg-icons
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
