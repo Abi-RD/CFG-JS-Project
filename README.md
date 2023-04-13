@@ -1,3 +1,3 @@
-# Javascript Project
+# JavaScript Project
 
-Building a website using javascript and react
+Building a website using JavaScript and React
