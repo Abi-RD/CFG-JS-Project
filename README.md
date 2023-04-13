@@ -1,2 +1,3 @@
-# ice-app
-JS Project
+# Javascript Project
+
+Building a website using javascript and react
